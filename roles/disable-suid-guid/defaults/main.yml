@@ -1,0 +1,6 @@
+# user-defined blacklist and whitelist
+os_suid_sgid_blacklist: []
+os_suid_sgid_whitelist: []
+
+# if this is true, remove any suid/sgid bits from files that were not in the whitelist
+os_suid_sgid_remove_from_unknown: false

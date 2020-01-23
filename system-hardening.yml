@@ -1,0 +1,7 @@
+---
+- name: System Hardening
+  hosts: linuxsec
+  become: yes
+  roles:
+    - disable-suid-guid
+  
