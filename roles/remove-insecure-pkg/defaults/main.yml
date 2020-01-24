@@ -1,0 +1,2 @@
+packages_clean: true
+packages_list: ['xinetd', 'inetd', 'ypserv', 'telnet-server', 'rsh-server', 'prelink']

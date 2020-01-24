@@ -1,0 +1,6 @@
+---
+- name: remove insecure packages
+  yum:
+    name: "{{ packages_list }}"
+    state: absent
+  when: packages_clean | bool
