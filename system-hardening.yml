@@ -4,4 +4,5 @@
   become: yes
   roles:
     #- disable-suid-guid
-     - del-file-rhosts
+    # - del-file-rhosts
+     - remove-insecure-pkg
