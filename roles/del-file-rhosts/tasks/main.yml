@@ -1,0 +1,23 @@
+---
+- name: Get all user accounts in system
+  command: "awk -F: '{print $1}' /etc/passwd"
+  changed_when: false
+  register: usersacc
+
+- name: Delete .rhosts files from each user if exists
+  file:
+    dest: "~{{ item }}/.rhosts"
+    state: absent
+  with_flattened: "{{ usersacc.stdout_lines | default([]) }}"
+
+- name: Delete hosts.equi from system
+  file:
+    dest: /etc/hosts.equiv
+    state: absent
+
+- name: Delete .netrc files from each user in system if exists
+  file:
+    dest: "~{{ item }}/.netrc"
+    state: absent
+  with_flattened: "{{ usersacc.stdout_lines | default([]) }}"
+

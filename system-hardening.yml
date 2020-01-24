@@ -3,5 +3,5 @@
   hosts: linuxsec
   become: yes
   roles:
-    - disable-suid-guid
-  
+    #- disable-suid-guid
+     - del-file-rhosts
