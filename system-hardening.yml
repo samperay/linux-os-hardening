@@ -5,4 +5,5 @@
   roles:
     #- disable-suid-guid
     # - del-file-rhosts
-     - remove-insecure-pkg
+    # - remove-insecure-pkg
+    - login-defs

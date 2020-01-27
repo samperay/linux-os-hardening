@@ -1,0 +1,25 @@
+{{ ansible_managed }}
+
+MAIL_DIR	/var/spool/mail
+
+PASS_MAX_DAYS	{{ os_passwd_max_age }}
+PASS_MIN_DAYS	{{ os_passwd_min_days }}
+PASS_MIN_LEN	{{ os_passwd_min_length }}
+PASS_WARN_AGE	{{ os_passwd_warn_age }}
+
+UID_MIN       {{ os_auth_uid_min }} 
+UID_MAX                 60000
+SYS_UID_MIN               201
+SYS_UID_MAX               999
+
+GID_MIN       {{ os_auth_gid_min }}
+GID_MAX                 60000
+SYS_GID_MIN   {{ os_sys_gid_min }}
+SYS_GID_MAX   {{ os_sys_gid_max }}
+
+CREATE_HOME	yes
+UMASK           077
+USERGROUPS_ENAB yes
+ENCRYPT_METHOD MD5
+MD5_CRYPT_ENAB yes
+

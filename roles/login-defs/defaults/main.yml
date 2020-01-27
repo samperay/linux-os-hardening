@@ -1,0 +1,9 @@
+os_passwd_max_age: 90
+os_passwd_min_days: 15
+os_passwd_min_length: 8
+os_passwd_warn_age: 15
+os_auth_uid_min: 1000
+os_auth_gid_min: 1000
+os_sys_gid_min: 201
+os_sys_gid_max: 201
+
